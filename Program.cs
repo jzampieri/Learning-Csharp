@@ -3,7 +3,7 @@
 string mensagemDeBoasVindas = "Boas vindas ao meu programa!";
 
 
-void ExibirMensagemDeBoasVindas()
+void ExibirLogo()
 {
     Console.WriteLine("SCREEN SOUND");
     Console.WriteLine(mensagemDeBoasVindas);
@@ -11,6 +11,7 @@ void ExibirMensagemDeBoasVindas()
 
 void ExibirOpçoesDoMenu()
 {
+    ExibirLogo();
     Console.WriteLine("\nDigite 1 para registrar uma banda");
     Console.WriteLine("Digite 2 para mostrar todas as bandas");
     Console.WriteLine("Digite 3 para avaliar uma banda");
@@ -19,12 +20,35 @@ void ExibirOpçoesDoMenu()
 
     Console.Write("\nDigite a sua opção: ");
     string opcaoEscolhida = Console.ReadLine()!; // "!" usado para obrigatoriedade de input
-    int opcaoEscolhidaNumerica = int.Parse(opcaoEscolhida);
-    if (opcaoEscolhidaNumerica == 1)
+    int opcaoEscolhidaNumerica = int.Parse(opcaoEscolhida); //Transformando o input do usuario em INT para leitura do if
+
+    switch (opcaoEscolhidaNumerica)
     {
-        Console.WriteLine("Você digitou a opção " + opcaoEscolhida);
+        case 1: RegistrarBanda();
+            break;
+        case 2: Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaNumerica);
+            break;
+        case 3: Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaNumerica);
+            break;
+        case 4: Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaNumerica);
+            break;
+        case -1: Console.WriteLine("Tchau Tchau");
+            break;
+        default: Console.WriteLine("Opção Inválida.");
+            break;
     }
 }
 
-ExibirMensagemDeBoasVindas();
+void RegistrarBanda()
+{
+    Console.Clear();
+    Console.WriteLine("Registro de bandas");
+    Console.Write("Digite o nome da banda que deseja registrar: ");
+    string nomeDaBanda = Console.ReadLine()!;
+    Console.WriteLine($"A banda {nomeDaBanda} foi registrada!"); //cifrão para interpolação de string
+    Thread.Sleep(2000);
+    Console.Clear();
+    ExibirOpçoesDoMenu();
+}
+
 ExibirOpçoesDoMenu();
