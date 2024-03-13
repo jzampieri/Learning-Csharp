@@ -12,3 +12,4 @@ C:\Users\julio\source\repos\PrimeiroProjetoC#\PrimeiroProjetoC#\obj\Debug\net8.0
 C:\Users\julio\source\repos\PrimeiroProjetoC#\PrimeiroProjetoC#\obj\Debug\net8.0\PrimeiroProjetoC#.pdb
 C:\Users\julio\source\repos\PrimeiroProjetoC#\PrimeiroProjetoC#\obj\Debug\net8.0\PrimeiroProjetoC#.genruntimeconfig.cache
 C:\Users\julio\source\repos\PrimeiroProjetoC#\PrimeiroProjetoC#\obj\Debug\net8.0\ref\PrimeiroProjetoC#.dll
+C:\Users\julio\source\repos\PrimeiroProjetoC#\PrimeiroProjetoC#\obj\Debug\net8.0\PrimeiroProjetoC#.sourcelink.json
