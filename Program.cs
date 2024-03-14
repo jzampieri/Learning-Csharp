@@ -1,6 +1,7 @@
 ﻿// Screen Sound
 
 string mensagemDeBoasVindas = "Boas vindas ao meu programa!";
+List<string> listaDasBandas = new List<string>{"U2", "The Beatles", "Calipso", "Iron Maiden"};
 
 
 void ExibirLogo()
@@ -26,7 +27,7 @@ void ExibirOpçoesDoMenu()
     {
         case 1: RegistrarBanda();
             break;
-        case 2: Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaNumerica);
+        case 2: MostraBandasRegistradas();
             break;
         case 3: Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaNumerica);
             break;
@@ -45,8 +46,23 @@ void RegistrarBanda()
     Console.WriteLine("Registro de bandas");
     Console.Write("Digite o nome da banda que deseja registrar: ");
     string nomeDaBanda = Console.ReadLine()!;
-    Console.WriteLine($"A banda {nomeDaBanda} foi registrada!"); //cifrão para interpolação de string
+    listaDasBandas.Add(nomeDaBanda); // adiciona um item a uma lista
+    Console.WriteLine($"A banda {nomeDaBanda} foi registrada com sucesso!"); //cifrão para interpolação de string
     Thread.Sleep(2000);
+    Console.Clear();
+    ExibirOpçoesDoMenu();
+}
+
+void MostraBandasRegistradas()
+{
+    Console.Clear();
+    Console.WriteLine("Exibindo todas as bandas registradas\n");
+    for (int i = 0; i < listaDasBandas.Count; i++) //loop for, parecido com python
+    {
+        Console.WriteLine($"Banda: {listaDasBandas[i]}");
+    }
+    Console.WriteLine("Digite uma tecla para voltar ao menu principal.");
+    Console.ReadKey();
     Console.Clear();
     ExibirOpçoesDoMenu();
 }
